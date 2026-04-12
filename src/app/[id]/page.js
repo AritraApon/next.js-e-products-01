@@ -1,3 +1,4 @@
+import AddToCard from "@/Components/Button/AddtoCard";
 import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
@@ -38,7 +39,7 @@ const ProductDetails = async ({ params }) => {
                         }
                     </div>
                     <div>
-                        <button className="btn btn-warning  text-lg font-semibold ">Add to Cart</button>
+                       <AddToCard data={data} />
                     </div>
 
 

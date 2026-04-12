@@ -1,9 +1,15 @@
+'use client'
+import { ProductsContext } from "@/Contexts/ProductsProvider";
+import { useContext } from "react";
 
 
 const CartPage = () => {
+        const {addCart , } = useContext(ProductsContext)
     return (
         <div>
-          cart page
+         {
+            addCart.map(addProduct => <div key={addProduct.id}>{addProduct.title}</div>)
+         }
         </div>
     );
 };

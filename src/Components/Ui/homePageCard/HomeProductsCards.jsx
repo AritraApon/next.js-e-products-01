@@ -1,3 +1,4 @@
+import AddToCard from "@/Components/Button/AddtoCard";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,9 +20,9 @@ const HomeProductsCards = ({ product }) => {
                     <div>
                         <p className="text-2xl font-bold text-blue-700">${price} </p>
                     </div>
-                    <div>
-                        <button className="btn btn-success text-lg font-semibold ">Add to Cart</button>
-                    </div>
+                     <div>
+                <button  className="btn btn-warning text-lg font-semibold ">Details</button>
+            </div>
                 </div>
 
             </div>
