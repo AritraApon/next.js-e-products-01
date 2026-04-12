@@ -2,6 +2,7 @@
 import { ProductsContext } from '@/Contexts/ProductsProvider';
 
 import React, { useContext } from 'react';
+import { toast } from 'react-toastify';
 
 const AddToCard = ({product ,data}) => {
     const {addCart , setAddCart} =useContext(ProductsContext)
@@ -11,9 +12,9 @@ const AddToCard = ({product ,data}) => {
 
         if(!isExists){
           setAddCart([...addCart,data])
-        alert('add to cart')
+        toast.success(' Successfully add to cart')
         }else{
-            alert('sorry')
+            toast.error('Already add to card')
         }
 
     }

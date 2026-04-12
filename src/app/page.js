@@ -14,7 +14,7 @@ export default async function Home() {
       <div>
         <h1 className="font-bold text-4xl md:text-6xl text-center my-10">Products</h1>
       </div>
-     <div className="w-11/12 mx-auto grid grid-cols-2 lg:grid-cols-4 gap-5">
+     <div className="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-5">
       {
         products.map(product=><HomeProductsCards key={product.id} product={product} />)
       }

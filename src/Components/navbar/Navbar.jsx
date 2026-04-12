@@ -1,12 +1,15 @@
 "use client"
+import { ProductsContext } from "@/Contexts/ProductsProvider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useContext } from "react";
 import { FaRegUserCircle } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 
 
 
 const Navbar = () => {
+       const {addCart } =useContext(ProductsContext)
     const pathName = usePathname()
     const navLink = <>
         <li className={` ${pathName === '/' ? 'border-2 border-red-500' : ''}   `}>
@@ -24,7 +27,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div>
+        <div className="sticky top-0 z-50">
             <div className="navbar bg-base-100 shadow-sm">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -47,7 +50,7 @@ const Navbar = () => {
                 <div className="navbar-end gap-5">
                     <Link href={'/Carts'}>
                         <div className="indicator">
-                            <span className="indicator-item badge badge-secondary">{0}</span>
+                            <span className="indicator-item badge badge-secondary">{addCart.length ? addCart.length :'0'}</span>
                             <button className="btn btn-primary text-xl"><FaCartShopping /></button>
                         </div>
                     </Link>

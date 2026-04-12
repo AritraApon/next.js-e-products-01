@@ -11,8 +11,8 @@ const ProductDetails = async ({ params }) => {
     const { thumbnail, images, title, price, category, description, rating, tags, discountPercentage, brand, weight, warrantyInformation, availabilityStatus } = data;
 
     return (
-        <div className="w-10/12 mx-auto my-10">
-            <div className="w-10/12 lg:w-7/12 mx-auto card lg:card-side bg-[#1f1e1ed5] shadow-sm">
+        <div className="w-11/12 mx-auto my-10">
+            <div className="w-11/12 lg:w-7/12 mx-auto card lg:card-side bg-[#1f1e1ed5] shadow-sm">
                 <figure>
                     <Image src={thumbnail} alt={title} width={2500} height={2500} />
                 </figure>
