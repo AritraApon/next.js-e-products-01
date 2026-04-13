@@ -1,3 +1,5 @@
+import DiscountBanner from "@/Components/Discount/Discount";
+import Features from "@/Components/Features/Features";
 import Banner from "@/Components/hero banner/Banner";
 import HomeProductsCards from "@/Components/Ui/homePageCard/HomeProductsCards";
 import Image from "next/image";
@@ -23,6 +25,8 @@ export default async function Home() {
      <div className="flex justify-center my-10">
        <Link href={'/Products'}> <button className="btn btn-primary">SHOP All Product</button></Link>
      </div>
+     <DiscountBanner/>
+     <Features/>
      </div>
    </>
   );

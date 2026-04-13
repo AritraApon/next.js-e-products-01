@@ -17,7 +17,7 @@ const CartPage = () => {
         toast.success('Successfully Proceed to Checkout')
     }
     return (
-        <div className="w-10/12 mt-10 mx-auto space-y-5">
+        <div className="w-10/12 min-h-screen mt-10 mx-auto space-y-5">
             <div className="space-y-5">
                 {addCart.length === 0 ? <div className="bg-gray-100 text-gray-600 p-4 rounded-md text-center">
                     <div className="flex justify-center">

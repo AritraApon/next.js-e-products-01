@@ -12,16 +12,16 @@ const Navbar = () => {
        const {addCart } =useContext(ProductsContext)
     const pathName = usePathname()
     const navLink = <>
-        <li className={` ${pathName === '/' ? 'border-2 border-red-500' : ''}   `}>
+        <li className={` ${pathName === '/' ? 'border-b-2 border-blue-500' : ''}   `}>
             <Link href={'/'}>Home</Link>
         </li>
-        <li className={` ${pathName === '/Products' ? 'border-2 border-red-500' : ''}   `}>
+        <li className={` ${pathName === '/Products' ? 'border-b-2 border-blue-500' : ''}   `}>
             <Link href={'/Products'}>Products</Link>
         </li>
-        <li className={` ${pathName === '/About' ? 'border-2 border-red-500' : ''}   `}>
+        <li className={` ${pathName === '/About' ? 'border-b-2 border-blue-500' : ''}   `}>
             <Link href={'/About'}>About</Link>
         </li>
-        <li className={` ${pathName === '/Contacts' ? 'border-2 border-red-500' : ''}   `}>
+        <li className={` ${pathName === '/Contacts' ? 'border-b-2 border-blue-500' : ''}   `}>
             <Link href={'/Contacts'}>Contacts</Link>
         </li>
 

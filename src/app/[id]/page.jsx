@@ -12,7 +12,7 @@ const ProductDetails = async ({ params }) => {
 
     return (
         <div className="w-11/12 mx-auto my-10">
-            <div className="w-11/12 lg:w-7/12 mx-auto card lg:card-side bg-[#1f1e1ed5] shadow-sm">
+            <div className="w-11/12 lg:w-7/12 mx-auto card lg:card-side bg-[#0d1530d5] shadow-sm">
                 <figure>
                     {thumbnail ? (
                         <Image src={thumbnail} alt={title} width={2500} height={2500} />
