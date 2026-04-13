@@ -14,7 +14,13 @@ const ProductDetails = async ({ params }) => {
         <div className="w-11/12 mx-auto my-10">
             <div className="w-11/12 lg:w-7/12 mx-auto card lg:card-side bg-[#1f1e1ed5] shadow-sm">
                 <figure>
-                    <Image src={thumbnail} alt={title} width={2500} height={2500} />
+                    {thumbnail ? (
+                        <Image src={thumbnail} alt={title} width={2500} height={2500} />
+                    ) : (
+                        <div className="w-[250px] h-[250px] flex items-center justify-center bg-gray-200 text-gray-600">
+                            No Image
+                        </div>
+                    )}
                 </figure>
                 <div className="card-body">
                     <div className="space-y-1">
@@ -35,11 +41,11 @@ const ProductDetails = async ({ params }) => {
 
                     <div className="space-x-3 ">
                         {
-                            tags.map((t, i) => <div key={i} className="badge badge-outline bg-blue-500 text-black">{t}</div>)
+                            tags?.map((t, i) => <div key={i} className="badge badge-outline bg-blue-500 text-black">{t}</div>)
                         }
                     </div>
                     <div>
-                       <AddToCard data={data} />
+                        <AddToCard data={data} />
                     </div>
 
 
@@ -92,10 +98,12 @@ const ProductDetails = async ({ params }) => {
                     </tbody>
                 </table>
             </div>
-            <div className="flex justify-center">
-                <Link href={'/'}><button className="btn btn-error mt-10">Go Home</button></Link>
+            <div className="flex justify-center gap-3 mt-10">
+                <Link href={'/'}><button className="btn btn-error ">Go Home</button></Link>
+                <Link href={'/Products'}> <button className="btn btn-primary">SHOP All Product</button></Link>
 
             </div>
+
 
         </div>
     );

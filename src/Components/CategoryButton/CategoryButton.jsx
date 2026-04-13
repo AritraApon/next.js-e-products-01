@@ -36,7 +36,7 @@ const CategoryButton =  ({setActiveCategory ,activeCategory}) => {
                 </div>
                 <div className="drawer-side mt-10">
                     <label htmlFor="my-drawer-1" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu bg-base-200 min-h-full w-80 p-4">
+                    <ul className="menu bg-base-200 min-h-full w-50 p-4">
                         {/* Sidebar content here */}
                           <li>   <button onClick={()=>setActiveCategory('all')} className={ ` ${activeCategory==='all' ? ' border border-blue-600' : ''} px-4 py-2  text-white rounded-lg capitalize`}>
                 All

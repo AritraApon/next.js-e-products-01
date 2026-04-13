@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const CartsCard = ({setAddCart,addProduct ,addCart}) => {
     const { thumbnail, images, title, price, category, description, rating, tags, discountPercentage, brand, weight, warrantyInformation, availabilityStatus } = addProduct;
@@ -7,6 +8,7 @@ const CartsCard = ({setAddCart,addProduct ,addCart}) => {
 const handleDelete = (addProduct)=> {
     const filterCart = addCart.filter(cart=> cart.id != addProduct.id )
     setAddCart(filterCart)
+    toast.error('Delete item')
 }
 
     return (
