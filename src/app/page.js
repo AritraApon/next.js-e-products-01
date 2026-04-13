@@ -1,6 +1,7 @@
 import Banner from "@/Components/hero banner/Banner";
 import HomeProductsCards from "@/Components/Ui/homePageCard/HomeProductsCards";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Home() {
   const res = await fetch('https://dummyjson.com/products')
@@ -16,8 +17,11 @@ export default async function Home() {
       </div>
      <div className="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-5">
       {
-        products.map(product=><HomeProductsCards key={product.id} product={product} />)
+        products.slice(0,8).map(product=><HomeProductsCards key={product.id} product={product} />)
       }
+     </div>
+     <div className="flex justify-center my-10">
+       <Link href={'/Products'}> <button className="btn btn-primary">SHOP All Product</button></Link>
      </div>
      </div>
    </>

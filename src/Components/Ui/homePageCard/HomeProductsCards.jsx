@@ -8,7 +8,8 @@ const HomeProductsCards = ({ product }) => {
     return (
         <Link href={`/${id}`}>
 
-            <div className="bg-[#1f1e1ed5] shadow rounded-2xl py-3 px-5">
+            <div className="bg-[#1f1e1ed5] shadow rounded-2xl py-3 px-5 transition-transform duration-300 
+                hover:scale-105 hover:shadow-sm hover:shadow-blue-400 cursor-pointer">
                 <div className="flex justify-center items-center ">
                     <Image src={thumbnail} alt="gg" width={200} height={200} />
                 </div>

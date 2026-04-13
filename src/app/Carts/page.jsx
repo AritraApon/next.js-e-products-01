@@ -8,7 +8,10 @@ import { toast } from "react-toastify";
 
 const CartPage = () => {
     const { addCart, setAddCart } = useContext(ProductsContext);
-    const totalPrice = addCart.reduce((total, item) => total + item.price, 0);
+   const total = Array.isArray(addCart)
+  ? addCart.reduce((acc, item) => acc + item.price , 0)
+  : 0;
+
     const handelProceed = () => {
         setAddCart('')
         toast.success('Successfully Proceed to Checkout')
@@ -30,7 +33,7 @@ const CartPage = () => {
                     addCart.length > 0 && (
                         <div className="space-y-3">
                             <h2 className="text-xl font-semibold">
-                                Total: ${totalPrice}
+                                Total: ${total.toFixed(2)}
                             </h2>
 
                             <button onClick={handelProceed} className="btn btn-success w-full">
